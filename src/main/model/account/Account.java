@@ -8,6 +8,9 @@ public abstract class Account {
 
 
     public Account(String id, String name, double balance) {
+        if (id == null || id.isBlank() || name == null || name.isBlank() ){
+            throw new IllegalArgumentException("Id or Name cannot be empty or null");
+        }
         this.id = id;
         this.name = name;
         this.balance = balance;
@@ -24,6 +27,9 @@ public abstract class Account {
     }
 
     public void setId(String id) {
+        if (id == null || id.isBlank()){
+            throw new IllegalArgumentException("invalid id");
+        }
         this.id = id;
     }
 
@@ -32,6 +38,9 @@ public abstract class Account {
     }
 
     public void setName(String name) {
+        if (name == null || name.isBlank()){
+            throw new IllegalArgumentException("invalid name");
+        }
         this.name = name;
     }
 
@@ -41,6 +50,14 @@ public abstract class Account {
 
     public void setBalance(double balance) {
         this.balance = balance;
+    }
+
+    @Override
+    public String toString() {
+        return (this.getClass().getSimpleName()) + "    " +
+            "\t" + this.getId() + "" +
+            "\t" + this.getName() + "" +
+            "\t$" + this.getBalance() + "";
     }
 
     

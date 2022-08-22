@@ -16,6 +16,10 @@ public class Main {
         Savings savings = new Savings("ce07d7b3-9038-43db-83ae-77fd9c0450c9", "Saul Goodman", 2241.60);
         Loan loan = new Loan("4991bf71-ae8f-4df9-81c1-9c79cff280a5", "Phoebe Buffay", 2537.31);
 
+        System.out.println(chequing);
+        System.out.println(savings);
+        System.out.println(loan);
+
     }
 
     /**
