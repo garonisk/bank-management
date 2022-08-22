@@ -12,7 +12,7 @@ public abstract class Account {
 
 
     public Account(String id, String name, double balance) {
-        if (id == null || id.isBlank() || name == null || name.isBlank() ){
+        if (id == null || id.isBlank() || name == null || name.isBlank()){
             throw new IllegalArgumentException("Id or Name cannot be empty or null");
         }
         this.id = id;
