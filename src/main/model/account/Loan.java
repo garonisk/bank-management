@@ -8,5 +8,15 @@ public class Loan extends Account{
     public Loan(Loan source){
         super(source);
     }
+    @Override
+    public void deposit(double amount) {
+        // TODO Auto-generated method stub
+        
+    }
+    @Override
+    public boolean withdraw(double amount) {
+        // TODO Auto-generated method stub
+        return false;
+    }
 
 }
