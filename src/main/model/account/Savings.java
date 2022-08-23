@@ -10,6 +10,13 @@ public class Savings extends Account{
     public Savings(Savings source){
         super(source);
     }
+
+    @Override
+    public Account clone() {
+        // TODO Auto-generated method stub
+        return new Savings(this);
+    }
+
     @Override
     public void deposit(double amount) {
         super.setBalance(super.round(super.getBalance() + amount));
